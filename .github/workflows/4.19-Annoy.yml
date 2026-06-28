@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/MakeAnnoy/kernel_xiaomi_sdm660.git'
+        default: 'https://github.com/shiftbell/android_kernel_xiaomi_sdm660.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'experimental'
+        default: 'wip'
         required: true
         type: string
       kernel-config:

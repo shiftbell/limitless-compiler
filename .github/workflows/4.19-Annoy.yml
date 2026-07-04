@@ -179,7 +179,7 @@ jobs:
          if [ ${{ inputs.kernelsu }} == ksu ]; then
             curl -LSs "https://raw.githubusercontent.com/FirmanBell/KernelSU/main/kernel/setup.sh" | bash -s main
          elif [ ${{ inputs.kernelsu }} == enjoy ]; then
-            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.3.0-enjoy
+            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.3.0-test
          elif [ ${{ inputs.kernelsu }} == hookless ]; then   
             curl -LSs "https://raw.githubusercontent.com/FirmanBell/KernelSU-Next/stable/kernel/setup.sh" | bash -s hookless
          elif [ ${{ inputs.kernelsu }} == 3 ]; then

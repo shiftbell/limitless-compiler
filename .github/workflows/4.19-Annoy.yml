@@ -15,12 +15,12 @@ on:
         type: string
       compiler:
         description: 'Compiler | gcc|clang|llvm'
-        default: 'clang'
+        default: 'gcc'
         required: true
         type: string
       aosp-clang:
         description: 'Clang | false for disable'
-        default: '21'
+        default: 'false'
         required: true
         type: string
       kernel-url:
@@ -30,7 +30,7 @@ on:
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'wip'
+        default: 'mglru'
         required: true
         type: string
       kernel-config:
@@ -178,8 +178,8 @@ jobs:
          rm -rf KernelSU
          if [ ${{ inputs.kernelsu }} == ksu ]; then
             curl -LSs "https://raw.githubusercontent.com/FirmanBell/KernelSU/main/kernel/setup.sh" | bash -s main
-         elif [ ${{ inputs.kernelsu }} == next ]; then
-            curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
+         elif [ ${{ inputs.kernelsu }} == enjoy ]; then
+            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.3.0-enjoy
          elif [ ${{ inputs.kernelsu }} == hookless ]; then   
             curl -LSs "https://raw.githubusercontent.com/FirmanBell/KernelSU-Next/stable/kernel/setup.sh" | bash -s hookless
          elif [ ${{ inputs.kernelsu }} == 3 ]; then

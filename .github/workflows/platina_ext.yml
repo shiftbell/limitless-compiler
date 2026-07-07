@@ -25,7 +25,7 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/MakeAnnoy/kernel_xiaomi_platina.git'
+        default: 'https://github.com/shiftbell/kernel_xiaomi_platina.git'
         required: true
         type: string
       kernel-branch:
@@ -180,8 +180,8 @@ jobs:
          rm -rf KernelSU
          if [ ${{ inputs.kernelsu }} == ksu ]; then
             curl -LSs "https://raw.githubusercontent.com/backslashxx/KernelSU/master/kernel/setup.sh" | bash -s master
-         elif [ ${{ inputs.kernelsu }} == next ]; then
-            curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
+         elif [ ${{ inputs.kernelsu }} == enjoy ]; then
+            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.3.0-enjoy
          elif [ ${{ inputs.kernelsu }} == hookless ]; then   
             curl -LSs "https://raw.githubusercontent.com/FirmanBell/KernelSU-Next/stable/kernel/setup.sh" | bash -s hookless
          elif [ ${{ inputs.kernelsu }} == 3 ]; then

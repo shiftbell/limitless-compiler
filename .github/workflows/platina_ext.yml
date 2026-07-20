@@ -183,7 +183,7 @@ jobs:
          elif [ ${{ inputs.kernelsu }} == enjoy ]; then
             curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.3.0
          elif [ ${{ inputs.kernelsu }} == 3.2 ]; then
-            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.2.0-test
+            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.2.0-enjoy
          elif [ ${{ inputs.kernelsu }} == susfs ]; then
             curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.3.0-enjoy   
          elif [ ${{ inputs.kernelsu }} == hookless ]; then   
